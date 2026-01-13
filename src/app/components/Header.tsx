@@ -104,7 +104,7 @@ export function Header() {
             </button>
             <div className="flex items-center gap-2 px-4 py-2 text-gray-700">
               <Phone className="w-4 h-4" />
-              <span className="text-sm">+7 778 748 9508</span>
+              <span className="text-sm">+7 (778) 748 9508</span>
             </div>
           </div>  
         )}
