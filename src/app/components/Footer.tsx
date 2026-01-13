@@ -13,28 +13,7 @@ export function Footer() {
             <p className="text-green-400 mb-4">
               Качественная мебель из натуральных материалов с индивидуальным подходом к каждому клиенту.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-amber-600 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
+            <div className="flex gap-4">     
             </div>
           </div>
 
@@ -63,7 +42,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-green-400 hover:text-amber-400 transition-colors">
+                <a href="https://wa.me/+77787489508" target="_blank" className="text-green-400 hover:text-amber-400 transition-colors">
                   Контакты
                 </a>
               </li>
@@ -75,20 +54,20 @@ export function Footer() {
             <h3 className="text-xl mb-4 text-green-400">Контакты</h3>
             <div className="space-y-3">
               <a
-                href="tel:+79001234567"
-                className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
+                 href="https://wa.me/+77787489508" target="_blank"
+                className="flex items-center gap-3 text-green-400 hover:text-green-400 transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span>+7 (778) 748 95 08 </span>
               </a>
               <a
                 href="mailto:info@mebellux.ru"
-                className="flex items-center gap-3 text-gray-400 hover:text-amber-400 transition-colors"
+                className="flex items-center gap-3 text-green-400 hover:text-green-400 transition-colors"
               >
-                <Mail className="w-5 h-5" />
-                <span>info@mebellux.ru</span>
+             
+                
               </a>
-              <div className="text-gray-400 mt-4">
+              <div className="text-green-400 mt-4">
                 <div>г. Астана ул,Шара Жиенкулова 1</div>
                 <div>Участок Largo, 2-ой цех</div>
               </div>
@@ -96,7 +75,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <div className="border-t border-green-800 pt-8 text-center text-green-400">
           <p>© {currentYear} Mymebel. Все права защищены.</p>
         </div>
       </div>

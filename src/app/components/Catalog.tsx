@@ -6,47 +6,46 @@ export function Catalog() {
       id: 1,
       title: "Кухонные гарнитуры",
       description: "Современные решения для кухни",
-      image: "https://i.pinimg.com/736x/d9/63/89/d96389d3bf6112cbc6c8730c2fcd7dd1.jpg",
+      image: "https://i.pinimg.com/474x/30/40/f6/3040f647ec8220530aa517ad4ae1acdf.jpg",
     },
     {
       id: 2,
       title: "Прихожые шкафы",
       description: "Шкафы с разными фрезировками под ваш вкус",
-      image: "https://i.pinimg.com/1200x/69/01/6c/69016c74af043899e64cf9f4cdff3eed.jpg" ,
+      image: "https://i.pinimg.com/474x/97/86/2c/97862cebbfadcbab242afef568a3a7f4.jpg" ,
     },
     {
       id: 3,
       title: "Спальные гарнитуры",
       description: "Шкафы и стеновые панели для спальни",
-      image: "https://i.pinimg.com/1200x/bb/d2/1b/bbd21b9a1ad768b37e0ad614fbb7c8bf.jpg",
+      image: "https://i.pinimg.com/736x/7e/b1/59/7eb15915e9eb2ba407f695bd6a48c19e.jpg",
     },
     {
       id: 4,
-      title: "Офисная мебель",
-      description: "Рабочие столы и стеллажи",
-      image: "",
+      title: "TV зона ",
+      description: "Идеальное решение для гостевой комнаты",
+      image: "https://i.pinimg.com/736x/c9/02/70/c9027077222473d9bb924c833b1e0749.jpg",
     },
     {
       id: 5,
-      title: "Кухонные гарнитуры",
-      description: "Современные решения для кухни",
-      image: "",
+      title: "Санузел",
+      description: "Мебель для удобств",
+      image: "https://i.pinimg.com/736x/ea/91/07/ea9107ec9897bdbcaf18991d5ff343f1.jpg",
     },
     {
       id: 6,
-      title: "Шкафы-купе",
-      description: "Встроенные и отдельностоящие шкафы",
-      image: "",
+      title: "Детская комната",
+      description: "Рабочие зоны для учебы",
+      image: "https://i.pinimg.com/736x/73/94/9c/73949c9e5eeca2ec9590b9635a0e004e.jpg",
     },
   ];
-
   return (
     <section id="catalog" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900 font-bold font-[Anek_Gurmukhi]">Наш каталог</h2>
+          <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900 font-bold font-[Anek_Gurmukhi] text-[32px]">Наш каталог</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-[Anek_Kannada] text-[20px]">
-           Производим мебель для любых помещений по индивидуальным размерам и требованиям заказчика.
+           Производим мебель для любых помещений по индивидуальным размерам и требованиям заказчика.Выберите стиль под ваш интерьер в нашем каталоге.
           </p>
         </div>
 
@@ -64,12 +63,14 @@ export function Catalog() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl mb-2 text-gray-900">{product.title}</h3>
+                <h3 className="text-xl mb-2 text-gray-900 font-[Anek_Gurmukhi] text-[24px]">{product.title}</h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg text-amber-700">{product.price}</span>
-                  <button className="text-amber-700 hover:text-amber-800 transition-colors">
-                    Подробнее →
+                  <button className="text-[rgb(238,187,100)] hover:text-amber-800 transition-colors font-bold">
+                    <a  href="https://wa.me/+77787489508" target="_blank">
+                      Подробнее →
+                    </a>
                   </button>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import { Menu, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import logo from "../../../assets/logo.png";
+import logo from "./imgs/logo.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,32 +19,32 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src={logo} alt="Mymebel Logo" className="h-12 w-12 object-contain" />
-            <h1 className="text-2xl text-[rgb(0,125,0)] text-[40px]">Mymebel</h1>
+            <h1 className="text-2xl text-[rgb(18,111,28)] text-[36px]">Mymebel</h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-gray-700 hover:text-amber-700 transition-colors"
+              className="text-[rgb(0,0,0)] hover:text-amber-700 transition-colors font-[sans-serif] text-[18px] font-bold font-normal"
             >
               Главная
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-gray-700 hover:text-amber-700 transition-colors"
+              className="text-[rgb(0,0,0)] hover:text-amber-700 transition-colors text-[17px]"
             >
               О нас
             </button>
             <button
               onClick={() => scrollToSection("catalog")}
-              className="text-gray-700 hover:text-amber-700 transition-colors"
+              className="text-[rgb(0,0,0)] hover:text-amber-700 transition-colors text-[17px]"
             >
               Каталог
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
-              className="text-gray-700 hover:text-amber-700 transition-colors"
+              className="text-[rgb(0,0,0)] hover:text-amber-700 transition-colors text-[17px]"
             >
               Галерея
             </button>
@@ -52,7 +52,7 @@ export function Header() {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+79001234567" className="flex items-center gap-2 text-gray-700 hover:text-amber-700 transition-colors">
+            <a href="https://wa.me/+77787489508" target="_blank" className="flex items-center gap-2 text-green-700 hover:text-amber-700 transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm">+7 (778) 748 95 08 </span>
             </a>
@@ -104,9 +104,9 @@ export function Header() {
             </button>
             <div className="flex items-center gap-2 px-4 py-2 text-gray-700">
               <Phone className="w-4 h-4" />
-              <span className="text-sm">+7 (900) 123-45-67</span>
+              <span className="text-sm">+7 778 748 9508</span>
             </div>
-          </div>
+          </div>  
         )}
       </div>
     </header>
