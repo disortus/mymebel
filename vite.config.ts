@@ -10,6 +10,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/mymebel/', // ← замените на название репозитория
   resolve: {
     alias: {
       // Alias @ to the src directory
@@ -17,3 +18,12 @@ export default defineConfig({
     },
   },
 })
+
+
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+
+// export default defineConfig({
+//   plugins: [react()],
+//   base: '/repo-name/' // ← замените на название репозитория
+// })
