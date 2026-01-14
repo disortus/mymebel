@@ -1,7 +1,7 @@
 import { Menu, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
-import logo from "./imgs/logo.png";
+import logo from "@/assets/f9a097497369ceb283638982905bd5042e9fee69.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

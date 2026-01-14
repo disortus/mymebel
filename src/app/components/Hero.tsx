@@ -1,6 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
 import logo from "figma:asset/f9a097497369ceb283638982905bd5042e9fee69.png";
+import background from "@/assets/background.png";
 
 export function Hero() {
   const scrollToFooter = () => {
@@ -13,7 +14,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1759753976401-4b41b1acdaaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmdXJuaXR1cmUlMjBzaG93cm9vbXxlbnwxfHx8fDE3NjgwNDMxMzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src= {background}
           alt="Мебельный шоурум"
           className="w-full h-full object-cover"
         />
@@ -37,16 +38,17 @@ export function Hero() {
         >
           Качественная мебель из натуральных материалов с индивидуальным подходом к каждому клиенту.Мебель это стиль который радует глаз и создаёт уют в пространстве.Более 15 лет опыта в производстве и дизайне интерьеров 
         </p>
-        <a  href="https://wa.me/+77787489508" target="_blank">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="bg-[rgb(141,226,151)] hover:bg-green-700 text-black px-8 py-6 text-lg italic text-[20px]"
-            // onClick={scrollToFooter}
-          >
+          <a  href="https://wa.me/+77787489508" target="_blank">
+            <Button
+              size="lg"
+              className="bg-[rgb(141,226,151)] hover:bg-green-700 text-black px-8 py-6 text-lg italic text-[20px]"
+              // onClick={scrollToFooter}
+            >
 
-            Связаться с нами
-          </Button>
+              Связаться с нами
+            </Button>
+          </a>
           <Button
             size="lg"
             variant="outline"
@@ -59,7 +61,7 @@ export function Hero() {
             Смотреть каталог
           </Button>
         </div>
-        </a>
+        
       </div>
     </section>
   );
