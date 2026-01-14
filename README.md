@@ -7,7 +7,9 @@
 
   Run `npm i` to install the dependencies.
 
-  Run `npm build` to build dist
+  Run `npm build` to build dist.
 
   Run `npm run dev` to start the development server.
+
+  Run `npm run deploy` to deploy site to server.
   
