@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import react, { useState } from 'react'
 
 const ERROR_IMG_SRC =
   'data:https://i.pinimg.com/736x/46/a9/31/46a93147868a427701e912d5a66dc4b7.jpg'
