@@ -1,4 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { motion } from "motion/react";
 
 export function Gallery() {
   const galleryImages = [
@@ -44,33 +45,67 @@ export function Gallery() {
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900 font-[Anek_Gurmukhi] text-[36px]">Галерея наших работ</h2>
+          <h2 className="text-3xl sm:text-4xl mb-4 text-gray-900 font-[Anek_Gurmukhi] text-[36px] italic font-bold">
+            Галерея наших работ
+          </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-[Anek_Gurmukhi] text-[20px]">
-            Примеры реализованных проектов и интерьеров с нашего пройзводства
+            Примеры реализованных проектов и интерьеров с нашего производства
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image) => (
-            <div
+          {galleryImages.map((image, index) => (
+            <motion.div
               key={image.id}
-              className="group relative h-80 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="relative h-80 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut", // валидный для Figma
+              }}
             >
+              {/* Картинка */}
               <ImageWithFallback
                 src={image.src}
                 alt={image.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="text-sm text-amber-300 mb-1">{image.category}</div>
-                  <h3 className="text-xl">{image.title}</h3>
+
+              {/* Анимированное выдвижение описания */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2,
+                  ease: "easeOut", // валидный easing
+                }}
+                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-6"
+              >
+                <div className="text-white">
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.2 + 0.1,
+                      ease: "easeOut", // валидный easing
+                    }}
+                  >
+                    <div className="text-sm text-amber-300 mb-1">{image.category}</div>
+                    <h3 className="text-xl">{image.title}</h3>
+                  </motion.div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
