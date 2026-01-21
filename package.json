@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "gh-pg": "npm install --save-dev gh-pages",
     "build": "vite build",
     "dev": "vite",
     "deploy": "npm run build && gh-pages -d dist"
@@ -66,6 +67,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "4.1.12",
     "vite": "^6.4.1"
   },

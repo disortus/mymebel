@@ -1,9 +1,10 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Button } from "./ui/button";
 import { Instagram } from "lucide-react";
+import bg from "@/app/components/imgs/background.png";
 import logo from "figma:asset/f9a097497369ceb283638982905bd5042e9fee69.png";
 
-<link rel="stylesheet" href="../css/a_style.css"></link>
+<link rel="stylesheet" href="../../styles/a_style.css"></link>
 
 export function Hero() {
   const scrollToContact = () => {
@@ -19,7 +20,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1759753976401-4b41b1acdaaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBmdXJuaXR1cmUlMjBzaG93cm9vbXxlbnwxfHx8fDE3NjgwNDMxMzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={bg}
           alt="Мебельный шоурум"
           className="w-full h-full object-cover"
         />
@@ -60,18 +61,18 @@ export function Hero() {
               Связаться с нами
             </Button>
           </a>
-          <a >
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-purple-600 hover:text-grey-500 hover:opacity-90  cursor: pointer via-pink-600 to-orange-500 hover:opacity-90 text-white px-8 py-6 text-lg text-[24px] flex items-center gap-2 transition-opacity"
-            rel="noopener noreferrer"
-            onClick={() => 
-              window.open("https://www.instagram.com/mymebel_01", "_blank")
-            }
-          >
-            <Instagram className="w-6 h-6" />
-            Instagram
-          </Button>
+          <a>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 hover:text-grey-500 hover:opacity-90  cursor: pointer via-pink-600 to-orange-500 hover:opacity-90 text-white px-8 py-6 text-lg text-[24px] flex items-center gap-2 transition-opacity"
+              rel="noopener noreferrer"
+              onClick={() =>
+                window.open("https://www.instagram.com/mymebel_01", "_blank")
+              }
+            >
+              <Instagram className="w-6 h-6" />
+              Instagram
+            </Button>
           </a>
           <Button
             size="lg"
