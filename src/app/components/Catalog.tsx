@@ -89,9 +89,11 @@ export function Catalog() {
                   {product.title}
                 </h3>
                 <p className="text-gray-600 mb-4 text-[16px]">{product.description}</p>
+                <a href="https://www.instagram.com/mymebel_01" target="_blank">
                 <button className="text-[rgb(238,187,100)] hover:text-amber-800 transition-colors font-bold">
                   Подробнее →
                 </button>
+                </a>
               </motion.div>
             </motion.div>
           ))}
